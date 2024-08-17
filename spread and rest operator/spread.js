@@ -2,6 +2,8 @@
 //? Spread Operator...
 //! ==================
 
+//! https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
+
 const udemy = "udemy";
 const letters = [...udemy];
 //* Allows an iterable to spread/expand individually inside reciever
@@ -11,7 +13,7 @@ const boys = ["john", "peter", "bob"];
 const girls = ["susan", "anna"];
 const bestFriend = "arnold";
 
-//* array inside ayyay
+//* array inside array
 // const friends = [boys, girls, bestFriend];
 
 //* Allows an iterable to spread/expand individually inside reciever
@@ -20,7 +22,9 @@ console.log(friends);
 
 //! Why it is importent copy the value  not the referance
 
-//* Split into single items and copy them.
+//? Split into single items and copy them.
+
+//* spread operator (create a shallow copy)
 const newFriends = [...friends];
 // newFriends[0] = "karina";
 // console.log(newFriends);
