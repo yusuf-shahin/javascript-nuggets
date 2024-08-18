@@ -33,19 +33,27 @@ const people = [
 //* create a function
 const getAges = (person) => person.age * 2;
 
-//* pass callBack function
-const ages = people.map(getAges);
-console.log(ages);
+//* pass argument as callBack function
+// const ages = people.map(getAges);
+// console.log(ages);
+
+//* same thinf in different way :-
+const name = people.map((e) => {
+  return e.name;
+});
+// console.log(name);
+
 // console.log(ages.join(""));
 
+//* create a new object of array using map method :-
 const newPeople = people.map((item) => {
   //* return a object...
   return {
-    firsName: item.name.toUpperCase(),
+    firstName: item.name.toUpperCase(),
     oldAge: item.age + 20,
   };
 });
-console.log(newPeople);
+// console.log(newPeople);
 
 const names = people.map((person) => `<h2>${person.name}</h2>`);
 const result = document.querySelector("#result");
