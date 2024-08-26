@@ -14,47 +14,83 @@
 //* Example
 //===========
 
-//* const promise = new Promise((solve, rej) => {});
+//* const promise = new Promise((resolve, reject) => {});
 //* console.log(promise);
 // [[PromiseState]]: "pending";
 
-//* const promise = new Promise((solve, rej) => {
-//*   solve("function is okk");
+//* const promise = new Promise((resolve, reject) => {
+//*   resolve("function is okk");
 //* });
 // console.log(promise);
 //[[PromiseState]]: "fulfilled"
 //[[PromiseResult]]: "function is okk"
 
-//* const promise = new Promise((solve, rej) => {
-//*   rej("function is problematic");
+//* const promise = new Promise((resolve, reject) => {
+//*   reject("function is problematic");
 //* });
-// console.log(promise);
 // console.log(promise);
 //[[PromiseState]]: "rejected"
 //[[PromiseResult]]: "function is problematic"
 
-//===========
-//* Code Explenetion
-//===========
+//! ===========
+//? Code Explenetion
+//! ===========
 
-function callBack(resolve, reject) {
-  let value = false;
-  if (value !== false) {
-    resolve(["halim", "nasir", "jamal kodhu"]);
-  } else {
-    reject(["shaown", "tawsif", "khaled"]);
-  }
-}
-const promise = new Promise(callBack);
-promise
-  .then((mango) => {
-    //# in then() method we get the value of resolve
-    console.log(mango[2]);
-  })
-  .catch((orenge) => {
-    //# in catch() method we get the value of reject
-    console.log(orenge[0]);
-  });
+//* create a callBack function :-
+// function callBack(resolve, reject) {
+//   let value = false;
+//   if (value === false) {
+//     resolve(["halim", "nasir", "jamal kodhu"]);
+//   } else {
+//     reject(["shaown", "tawsif", "khaled"]);
+//   }
+// }
+//* create new Promise , pass this callBack function as argument of Promise and store it in promise varible ...
+// const promise = new Promise(callBack);
+
+// promise
+//   .then((mango) => {
+//     //# in then() method we get the value of resolve
+//     console.log(mango[2]);
+//   })
+//   .catch((orenge) => {
+//     //# in catch() method we get the value of reject
+//     console.log(orenge[0]);
+//   });
+
+//! ===========
+//? same thing inside a function :-
+//! ===========
+
+// function promiseFunc(x) {
+//   //# create promise
+//   const promise = new Promise((resolve, reject) => {
+//     if (x) {
+//       resolve(["halim", "nasir", "jamal kodhu"]);
+//     } else {
+//       reject(["kamal chora", "tawsif", "khaled"]);
+//     }
+//   });
+//   //# promise chane :-
+//   const p = promise
+//     .then((mango) => {
+//       //# in then() method we get the value of resolve
+//       return mango[2];
+//     })
+//     .catch((orenge) => {
+//       //# in catch() method we get the value of reject
+//       return orenge[0];
+//     });
+
+//   return p;
+// }
+
+// const valueOfPromiseFunc = promiseFunc(true);
+// // console.log(valueOfPromiseFunc); //# Promise {<pending>}
+
+// valueOfPromiseFunc
+//   .then((resolve) => console.log(resolve))
+//   .catch((reject) => console.log(reject));
 
 // ===========
 //* Promise Chain and use it in real life...

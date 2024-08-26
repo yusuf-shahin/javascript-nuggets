@@ -1,7 +1,7 @@
 //! ===========
 //? Named Export
 //! ===========
-export const random = "random pompom value value";
+export const random = "random value name export...";
 
 export const people = [
   { name: "john", job: "developer" },

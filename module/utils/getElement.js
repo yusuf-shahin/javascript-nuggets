@@ -1,3 +1,7 @@
+//! ===========
+//? Default Export
+//! ===========
+
 // export default (selection) => {
 //   const element = document.querySelector(selection);
 //   if (element) {
@@ -7,7 +11,10 @@
 //   }
 // };
 
-//* different way :-
+//! ===========
+//? Export as a obj
+//! ===========
+
 const get = (selection) => {
   const element = document.querySelector(selection);
   if (element) {

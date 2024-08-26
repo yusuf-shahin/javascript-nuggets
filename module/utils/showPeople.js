@@ -11,7 +11,8 @@
 //     .join('');
 //   return newPeople;
 // };
-//# export the function name :-
+
+//* export the function name :-
 // export default showPeople;
 
 //! ===============
