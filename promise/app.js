@@ -92,9 +92,9 @@
 //   .then((resolve) => console.log(resolve))
 //   .catch((reject) => console.log(reject));
 
-// ===========
-//* Promise Chain and use it in real life...
-// ===========
+//! ===========
+//? Promise Chain and use it in real life...
+//! ===========
 
 const btn = document.querySelector(".btn-1");
 const name = document.querySelector(".name");
