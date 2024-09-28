@@ -31,7 +31,9 @@ console.log(item) //# {feather-items: Array(2), item-property: 'perfume set'}
 
 console.log(item["feather-items"]) //# ['item1', 'item2']
 
-//* create dynamic key using squre bracket notation
+//! ==============
+//? create dynamic key using squre bracket notation
+//! ==============
 
 let appState = "loading"
 
