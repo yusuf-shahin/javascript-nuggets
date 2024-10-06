@@ -1,34 +1,55 @@
 //! what is callback function ?
 //? A callback is a function passed as an argument to another function.
 
-//! https://www.freecodecamp.org/news/javascript-callback-function-plain-english/
+//!=============
+//? simple example
+//!=============
+
+const nameCallback = (a) => {
+  console.log(`hello , my name is ${a}`)
+}
+
+const node = (cbName, name) => {
+  //* invoke a function inside a function
+  cbName(name)
+}
+
+//* pass the function inside another function
+node(nameCallback, "yusuf") //# hello my name is yusuf
+node(nameCallback, "shahin") //# hello my name is shahin
+
+//? https://www.freecodecamp.org/news/javascript-callback-function-plain-english/
+
+//!=============
+//? complecated example
+//!=============
 
 function makeUppercase(value) {
-  console.log(value.toUpperCase());
+  console.log(value.toUpperCase())
 }
 // makeUppercase('yusuf')
 
 function reverseString(value) {
-  console.log(value.split("").reverse().join(""));
+  console.log(value.split("").reverse().join(""))
 }
 // reverseString("shahin");
 
 //* create a function
 function handleName(name, cb) {
-  const fullName = `mohammad ${name}`;
-  console.log(`Hello ${fullName}`);
-  cb(fullName);
+  const fullName = `mohammad ${name}`
+  console.log(`Hello ${fullName}`)
+  cb(fullName)
 }
 
 //* passed as an argument to another function.
-handleName("yusuf", makeUppercase);
+handleName("yusuf", makeUppercase)
 
 //* we also passed the argument like that :-
 // handleName("yusuf", (value) => {
 //   console.log(value.toUpperCase());
 // });
 
-handleName("farhan", reverseString);
+handleName("farhan", reverseString)
 
 //* we also passed the argument like that :-
 // handleName("farhan", (value) => {
@@ -39,7 +60,7 @@ handleName("farhan", reverseString);
 //? callback in DOM
 //! ===========
 
-const btn = document.querySelector(".btn");
+const btn = document.querySelector(".btn")
 
 //* pass the callback func in js addEventListener
 // btn.addEventListener('click', function () {
@@ -47,10 +68,10 @@ const btn = document.querySelector(".btn");
 // })
 
 //* same thing on different way
-btn.addEventListener("click", sayHello);
+btn.addEventListener("click", sayHello)
 
 function sayHello() {
-  console.log("hello people");
+  console.log("hello people")
 }
 
 //? use of callback, array methods, setTimeout etc. here we discuss about setTimeOut() :-
