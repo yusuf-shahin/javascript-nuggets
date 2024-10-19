@@ -1,6 +1,6 @@
 ## Set object
 
-- The Set object allows you to store a collection of elements, just like an Array. But here the value is store in a object .
+- The Set object allows you to store a collection of elements, just like an Array. But here the value is store in a object . [click here to learn more ...](https://www.freecodecamp.org/news/javascript-map-and-set-objects-explained/)
 
 #### Basic example :-
 
