@@ -1,14 +1,12 @@
-//! ===============
-//? ...Rest Operator
-//! ===============
-// gathers/collects the items
+## ...Rest Operator
 
-//! https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
+- Its basically useing for gathers or collects the items
 
-//! =========
-//? function
-//! =========
+[What is different between spread and rest operator](https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/)
 
+**in function**
+
+```js
 const num = (numbers) => {
   return numbers
 }
@@ -26,11 +24,11 @@ const doubleNum = (...numbers) => {
 }
 
 console.log(doubleNum(1, 2, 3, 4, 5)) //# [2, 4, 6, 8, 10]
+```
 
-//! =========
-//? arrays
-//! =========
+**in arrays**
 
+```js
 const pegion = ["makxhi", "chila", "chuina", "seraji", "lakkah"]
 
 const [pegion2, ...pegion3] = pegion
@@ -40,17 +38,18 @@ const [pegion2, ...pegion3] = pegion
 const fruit = ["apple", "orange", "lemon", "banana", "pear"]
 const [first, second, ...fruits] = fruit
 console.log(first, fruits) //# apple ["lemon", "banana", "pear"]
+```
 
-//! =========
-//? object
-//! =========
+**in object**
 
+```js
 const personRest = { firstName: "john", lastName: "smith", job: "developer" }
 const { job, ...end } = personRest
-console.log(end) //# { firstName: "john", lastName: "smith" }
+console.log(end) // { firstName: "john", lastName: "smith" }
 
-// const {  ...rest,job } = personRest;
-// console.log(job, rest); //# SyntaxError: Rest element must be last element
+// const { ...rest,job } = personRest;
+// console.log(job, rest);
+//! SyntaxError: Rest element must be last element
 
 const testScores = [78, 90, 56, 43, 99, 65]
 
@@ -66,3 +65,4 @@ const getAverage = (name, ...scores) => {
 
 getAverage(personRest.name, 78, 90, 56, 43)
 getAverage(personRest.name, ...testScores)
+```
