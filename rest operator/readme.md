@@ -45,11 +45,10 @@ console.log(first, fruits) //# apple ["lemon", "banana", "pear"]
 ```js
 const personRest = { firstName: "john", lastName: "smith", job: "developer" }
 const { job, ...end } = personRest
-console.log(end) // { firstName: "john", lastName: "smith" }
+console.log(end) //# { firstName: "john", lastName: "smith" }
 
 // const { ...rest,job } = personRest;
-// console.log(job, rest);
-//! SyntaxError: Rest element must be last element
+// console.log(job, rest); //# SyntaxError: Rest element must be last element
 
 const testScores = [78, 90, 56, 43, 99, 65]
 
