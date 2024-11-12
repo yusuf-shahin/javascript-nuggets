@@ -17,6 +17,7 @@ const mapState = stateList.map((ele) => {
   //! example :
   const abc = { name: "yusuf", id: 3 }
   return { abc }
+  //@ here basically return the abc object in two time.
 })
 //# [ { ele: { id: 1, count: 0 } }, { ele: { id: 2, count: 0 } } ]
 
